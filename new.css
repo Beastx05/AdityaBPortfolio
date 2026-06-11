@@ -1,0 +1,765 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:times new roman;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+/* FULL PAGE VIDEO */
+
+.bg-video{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    z-index:-2;
+}
+
+.bg-overlay{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    z-index:-1;
+}
+
+/* =========================
+   SCROLLBAR
+========================= */
+
+::-webkit-scrollbar{
+width:8px;
+}
+
+::-webkit-scrollbar-track{
+background:#050505;
+}
+
+::-webkit-scrollbar-thumb{
+background:#333;
+border-radius:20px;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+position:relative;
+height:100vh;
+overflow:hidden;
+display:flex;
+align-items:center;
+padding:0 10%;
+}
+
+
+
+
+.hero-content{
+max-width:700px;
+animation:fadeUp 1s ease;
+}
+
+.hero-tag{
+font-size:14px;
+letter-spacing:4px;
+color:#ccc;
+margin-bottom:20px;
+font-weight: 700;
+}
+
+.hero h1{
+font-family:times new roman;
+font-size:150px;
+line-height:.9;
+letter-spacing:3px;
+margin-bottom:20px;
+
+background:linear-gradient(
+90deg,
+#ffffff,
+#bdbdbd
+);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.hero-text{
+font-family:times new roman;
+font-size:18px;
+line-height:1.8;
+color:#d0d0d0;
+margin-bottom:40px;
+max-width:600px;
+}
+
+.hero-btn{
+display:inline-block;
+padding:10px 28px;
+border-radius:50px;
+border:1px solid rgba(255,255,255,.15);
+text-decoration:none;
+color:white;
+font-weight:600;
+transition:.4s;
+font-size: 18px;
+}
+
+.hero-btn:hover{
+background:white;
+color:black;
+transform:translateY(-4px);
+}
+
+/* =========================
+   GENERAL SECTIONS
+========================= */
+
+section{
+padding:120px 10%;
+}
+
+.section-title{
+font-family:times new roman;
+font-size:80px;
+letter-spacing:3px;
+margin-bottom:50px;
+text-align:center;
+color:white;
+font-weight: 400;
+}
+
+/* =========================
+   ABOUT
+========================= */
+
+.about-content{
+    max-width:1000px;
+    margin:auto;
+    text-align:center;
+}
+
+.about-content p{
+    font-size:clamp(1.2rem, 1.5vw, 1.6rem);
+    line-height:2.2;
+    color:rgba(255,255,255,0.88);
+    font-weight:300;
+    letter-spacing:0.8px;
+    max-width:850px;
+    margin:0 auto 35px;
+    text-wrap:balance;
+}
+
+/* =========================
+   SKILLS
+========================= */
+
+.skills-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:25px;
+}
+
+.skill-card{
+background:rgba(255,255,255,0.05);
+backdrop-filter:blur(10px);
+-webkit-backdrop-filter:blur(10px);
+
+padding:35px;
+border-radius:20px;
+text-align:center;
+font-size:1.5rem;
+font-weight:600;
+border:1px solid rgba(255,255,255,.08);
+transition:.4s;
+position:relative;
+height:100px;
+overflow:hidden;
+text-decoration:none;
+color:white;
+}
+
+.skill-card:hover{
+transform:translateY(-8px);
+}
+
+/* =========================
+   PORTFOLIO
+========================= */
+
+.portfolio-cards{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:25px;
+max-width:1100px;
+margin:auto;
+}
+
+.portfolio-card{
+position:relative;
+height:220px;
+overflow:hidden;
+border-radius:20px;
+text-decoration:none;
+color:white;
+transition:.4s;
+font-weight:600;
+
+}
+
+.portfolio-card video{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+object-fit:cover;
+transition:.8s;
+}
+
+.card-overlay{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(255,255,255,0.05);
+backdrop-filter:blur(10px);
+-webkit-backdrop-filter:blur(10px);
+z-index:1;
+}
+
+.card-title{
+font-family:times new roman;
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+font-size:28px;
+letter-spacing:2px;
+z-index:2;
+text-align:center;
+}
+
+.portfolio-card:hover{
+transform:translateY(-8px);
+box-shadow:
+0 0 40px rgba(255,255,255,.08),
+0 0 80px rgba(255,255,255,.05);
+}
+
+.portfolio-card:hover video{
+transform:scale(1.08);
+}
+
+/* ==========================
+   PODCAST SECTION
+========================== */
+
+#podcasts{
+padding:120px 10%;
+}
+
+.podcast-grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:25px;
+max-width:1200px;
+margin:auto;
+}
+
+.podcast-card{
+position:relative;
+height:320px;
+overflow:hidden;
+border-radius:20px;
+cursor:pointer;
+border:1px solid rgba(255,255,255,.08);
+transition:.4s;
+}
+
+.podcast-card:hover{
+transform:translateY(-8px);
+box-shadow:0 10px 30px rgba(255,255,255,.08);
+}
+
+.podcast-card video{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+.podcast-overlay{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+color: white;
+
+display:flex;
+flex-direction:column;
+justify-content:flex-end;
+
+padding:30px;
+
+background:linear-gradient(
+to top,
+rgba(0,0,0,.9),
+rgba(0,0,0,.15)
+);
+}
+
+.video-modal{
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100vw;
+    height:100vh;
+    background:rgba(0,0,0,.95);
+    z-index:99999;
+    justify-content:center;
+    align-items:center;
+}
+
+.video-modal video{
+    width:90%;
+    max-width:1200px;
+    max-height:85vh;
+}
+
+/* =========================
+   TOOLS
+========================= */
+
+.tools-grid{
+display:grid;
+grid-template-columns:repeat(7,120px);
+justify-content:center;
+gap:25px;
+margin-top:40px;
+}
+
+.tool h2{
+font-size:70px;
+}
+
+.tool{
+width:120px;
+height:120px;
+border-radius:20px;
+display:flex;
+justify-content:center;
+align-items:center;
+transition:.4s;
+overflow:hidden;
+}
+
+.tool img{
+width:70px;
+height:70px;
+object-fit:contain;
+}
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact h2{
+    font-family:times new roman;
+    font-size:80px;
+    line-height:.9;
+    margin-bottom:200px;
+    color:white;
+}
+
+.contact-info{
+    display:flex;
+    flex-direction:column;
+    gap:25px;
+}
+
+.contact-info a,
+.contact-info p{
+    text-decoration:none;
+    color:#d0d0d0;
+    font-size:24px;
+    transition:.3s;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:12px;
+}
+
+.contact-info a:hover{
+    color:white;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+padding:40px 20px;
+border-top:1px solid rgba(255,255,255,.08);
+text-align:center;
+}
+
+footer p{
+font-size:14px;
+color:#888;
+margin:5px 0;
+}
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+@keyframes fadeUp{
+
+from{
+opacity:0;
+transform:translateY(40px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media(max-width:1000px){
+
+.hero h1{
+font-size:110px;
+}
+
+.skills-grid,
+.stats{
+grid-template-columns:repeat(2,1fr);
+}
+
+.portfolio-cards{
+grid-template-columns:1fr;
+}
+
+.contact h2{
+font-size:80px;
+}
+
+}
+
+/* ==========================
+   MOBILE OPTIMIZATION
+========================== */
+
+@media screen and (max-width:768px){
+
+    html,body{
+        overflow-x:hidden;
+    }
+
+    section{
+        padding:80px 6%;
+    }
+
+    .hero{
+        min-height:100vh;
+        padding:0 6%;
+        text-align:center;
+        justify-content:center;
+    }
+
+    .hero-content{
+        max-width:100%;
+    }
+
+    .hero-tag{
+        font-size:12px;
+        letter-spacing:3px;
+    }
+
+    .hero h1{
+        font-size:clamp(3rem,14vw,5rem);
+        line-height:1;
+        letter-spacing:1px;
+    }
+
+    .hero-text{
+        font-size:15px;
+        line-height:1.7;
+        margin:0 auto 30px;
+    }
+
+    .hero-btn{
+        font-size:15px;
+        padding:12px 24px;
+    }
+
+    .section-title{
+        font-size:42px;
+        margin-bottom:35px;
+    }
+
+    .about-content p{
+        font-size:15px;
+        line-height:1.8;
+    }
+
+    .skills-grid{
+        grid-template-columns:1fr;
+        gap:15px;
+    }
+
+    .skill-card{
+        height:80px;
+        font-size:1.2rem;
+        padding:20px;
+    }
+
+    .portfolio-cards{
+        grid-template-columns:1fr;
+        gap:18px;
+    }
+
+    .portfolio-card{
+        height:180px;
+    }
+
+    .card-title{
+        font-size:20px;
+        width:90%;
+    }
+
+    .podcast-grid{
+        grid-template-columns:1fr;
+        gap:18px;
+    }
+
+    .podcast-card{
+        height:240px;
+    }
+
+    .podcast-overlay{
+        padding:18px;
+    }
+
+    .tools-grid{
+        grid-template-columns:repeat(3,1fr);
+        gap:12px;
+        width:100%;
+    }
+
+    .tool{
+        width:100%;
+        max-width:90px;
+        height:90px;
+        margin:auto;
+    }
+
+    .tool img{
+        width:50px;
+        height:50px;
+    }
+
+    .contact h2{
+        font-size:45px;
+        margin-bottom:60px;
+        text-align:center;
+    }
+
+    .contact-info a,
+    .contact-info p{
+        font-size:16px;
+        word-break:break-word;
+    }
+
+    .video-modal video{
+        width:95%;
+        max-height:70vh;
+    }
+}
+
+/* EXTRA SMALL DEVICES */
+
+@media screen and (max-width:480px){
+
+    .hero h1{
+        font-size:48px;
+    }
+
+    .hero-text{
+        font-size:14px;
+    }
+
+    .section-title{
+        font-size:34px;
+    }
+
+    .portfolio-card{
+        height:150px;
+    }
+
+    .podcast-card{
+        height:200px;
+    }
+
+    .tools-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .contact h2{
+        font-size:36px;
+    }
+}
+
+/* ==========================
+   LARGE DESKTOPS
+========================== */
+
+@media screen and (min-width: 1440px){
+
+    .hero{
+        padding:0 12%;
+    }
+
+    .hero h1{
+        font-size:145px;
+    }
+
+    .hero-text{
+        font-size:22px;
+        max-width:700px;
+    }
+
+    section{
+        padding:140px 12%;
+    }
+
+    .section-title{
+        font-size:70px;
+    }
+
+    .about-content p{
+        font-size:1.5rem;
+        max-width:1000px;
+    }
+
+    .skills-grid{
+        gap:35px;
+    }
+
+    .skill-card{
+        height:150px;
+        font-size:1.8rem;
+    }
+
+    .portfolio-cards{
+        max-width:850px;
+    }
+
+    .portfolio-card{
+        height:150px;
+        font-size:1.8rem;
+    }
+
+    .card-title{
+        font-size:24px;
+    }
+
+    .podcast-grid{
+        max-width:1400px;
+        margin:auto;
+        gap:35px;
+    }
+
+    .podcast-card{
+        height:320px;
+    }
+
+    .tools-grid{
+        grid-template-columns:repeat(7,140px);
+        gap:30px;
+    }
+
+    .tool{
+        width:140px;
+        height:140px;
+    }
+
+    .tool img{
+        width:80px;
+        height:80px;
+    }
+
+    .tool h2{
+	font-size:70px;
+    }
+
+    .contact h2{
+        font-size:75px;
+    }
+
+}
+
+/* ==========================
+   ULTRA WIDE / 4K
+========================== */
+
+@media screen and (min-width: 1920px){
+
+    body{
+        max-width:2200px;
+        margin:auto;
+    }
+
+    .hero h1{
+        font-size:145px;
+    }
+
+    .hero-text{
+        font-size:26px;
+    }
+
+    .section-title{
+        font-size:120px;
+    }
+
+    .portfolio-card{
+        height:300px;
+    }
+
+    .podcast-card{
+        height:380px;
+    }
+
+    .card-title{
+        font-size:30px;
+    }
+
+    .contact h2{
+        font-size:130px;
+    }
+
+    .skill-card{
+        height:120px;
+        font-size:1.8rem;
+    }
+
+}
